@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop カタログ</title>
+  <meta name="description" content="GitHub / Copilot / Advanced Security / Agentic DevOps のハンズオン公開カタログ" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📚</text></svg>" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">📚</span>
+        <div>
+          <h1 id="site-title" class="brand-title">Workshop カタログ</h1>
+          <p id="site-subtitle" class="brand-subtitle"></p>
+        </div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="テーマ切り替え" title="テーマ切り替え">
+        <span class="theme-icon-light" aria-hidden="true">☀️</span>
+        <span class="theme-icon-dark" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 対応マトリクス -->
+    <section class="section" aria-labelledby="matrix-heading">
+      <h2 id="matrix-heading" class="section-title">対応マトリクス</h2>
+      <p class="section-note">カテゴリごとに提供しているレベルの一覧です。セルをクリックすると絞り込めます。</p>
+      <div class="matrix-wrap">
+        <table id="matrix" class="matrix" aria-describedby="matrix-heading"></table>
+      </div>
+    </section>
+
+    <!-- フィルタ -->
+    <section class="section" aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="section-title">ワークショップを探す</h2>
+
+      <div class="filters">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="search" type="search" placeholder="キーワードで検索（タイトル・タグ・説明）" aria-label="キーワード検索" />
+        </div>
+
+        <div class="filter-group" role="group" aria-label="カテゴリで絞り込み">
+          <span class="filter-label">カテゴリ</span>
+          <div id="category-filters" class="chip-row"></div>
+        </div>
+
+        <div class="filter-group" role="group" aria-label="レベルで絞り込み">
+          <span class="filter-label">レベル</span>
+          <div id="level-filters" class="chip-row"></div>
+        </div>
+      </div>
+
+      <div class="results-bar">
+        <span id="result-count" class="result-count"></span>
+        <button id="reset-filters" class="link-button" type="button">フィルタをリセット</button>
+      </div>
+
+      <div id="cards" class="cards-grid" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden>条件に一致するワークショップが見つかりませんでした。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>最終更新: <span id="updated"></span></p>
+      <p class="footer-note">ワークショップの追加・編集は <code>data/workshops.json</code> を更新してください。</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/catalog.js" defer></script>
+</body>
+</html>

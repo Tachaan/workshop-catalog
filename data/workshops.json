@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Workshop カタログ",
+    "subtitle": "GitHub / Copilot / Advanced Security / Agentic DevOps ハンズオン公開カタログ",
+    "updated": "2026-06-30"
+  },
+  "levels": [
+    { "id": "basic", "name": "Basic", "description": "はじめての方・基礎を学ぶ方向け" },
+    { "id": "advanced", "name": "Advanced", "description": "実務での活用・応用を学ぶ方向け" }
+  ],
+  "categories": [
+    {
+      "id": "gh",
+      "short": "GH",
+      "name": "GitHub",
+      "description": "リポジトリ運用、Pull Request、Actions など GitHub の基礎を学ぶ。",
+      "levels": ["basic"],
+      "color": "#1f6feb"
+    },
+    {
+      "id": "ghcp",
+      "short": "GHCP",
+      "name": "GitHub Copilot",
+      "description": "コード補完からチャット・エージェントまで GitHub Copilot を体験する。",
+      "levels": ["basic", "advanced"],
+      "color": "#8250df"
+    },
+    {
+      "id": "ghas",
+      "short": "GHAS",
+      "name": "GitHub Advanced Security",
+      "description": "コードスキャン、シークレットスキャン、依存関係管理でセキュリティを強化する。",
+      "levels": ["basic"],
+      "color": "#cf222e"
+    },
+    {
+      "id": "agentic-devops",
+      "short": "Agentic",
+      "name": "Agentic DevOps",
+      "description": "Coding Agent や自律エージェントを活用した次世代 DevOps を実践する。",
+      "levels": ["advanced"],
+      "color": "#1a7f37"
+    }
+  ],
+  "workshops": [
+    {
+      "id": "gh-basic-intro",
+      "title": "GitHub 入門ハンズオン",
+      "category": "gh",
+      "level": "basic",
+      "description": "アカウント作成からリポジトリ操作、コミット、ブランチ、Pull Request までの基本フローを体験します。",
+      "tags": ["Git", "Pull Request", "コラボレーション"],
+      "duration": "約2時間",
+      "url": "https://skills.github.com/"
+    },
+    {
+      "id": "gh-basic-actions",
+      "title": "GitHub Actions ではじめる CI/CD",
+      "category": "gh",
+      "level": "basic",
+      "description": "ワークフローの基礎を学び、テストの自動実行やビルドのパイプラインを構築します。",
+      "tags": ["GitHub Actions", "CI/CD", "自動化"],
+      "duration": "約2時間",
+      "url": "https://docs.github.com/ja/actions"
+    },
+    {
+      "id": "ghcp-basic-intro",
+      "title": "GitHub Copilot 基礎ハンズオン",
+      "category": "ghcp",
+      "level": "basic",
+      "description": "コード補完と Copilot Chat の基本操作を学び、日常の開発を高速化する方法を体験します。",
+      "tags": ["Copilot", "コード補完", "Copilot Chat"],
+      "duration": "約1.5時間",
+      "url": "https://docs.github.com/ja/copilot/get-started"
+    },
+    {
+      "id": "ghcp-advanced-customize",
+      "title": "GitHub Copilot 実践・カスタマイズ",
+      "category": "ghcp",
+      "level": "advanced",
+      "description": "カスタム指示、MCP、プロンプト設計など、Copilot をチーム開発に高度に組み込む手法を学びます。",
+      "tags": ["カスタム指示", "MCP", "プロンプト設計"],
+      "duration": "約3時間",
+      "url": "https://docs.github.com/ja/copilot/customizing-copilot"
+    },
+    {
+      "id": "ghas-basic-intro",
+      "title": "GitHub Advanced Security 入門",
+      "category": "ghas",
+      "level": "basic",
+      "description": "Code scanning・Secret scanning・Dependabot を有効化し、脆弱性の検出と対応の流れを学びます。",
+      "tags": ["Code scanning", "Secret scanning", "Dependabot"],
+      "duration": "約2時間",
+      "url": "https://docs.github.com/ja/code-security"
+    },
+    {
+      "id": "agentic-advanced-coding-agent",
+      "title": "Agentic DevOps ワークショップ",
+      "category": "agentic-devops",
+      "level": "advanced",
+      "description": "Copilot Coding Agent に Issue を委任し、自律的な実装・PR 作成・レビューまでのワークフローを構築します。",
+      "tags": ["Coding Agent", "自律エージェント", "DevOps"],
+      "duration": "約3時間",
+      "url": "https://docs.github.com/ja/copilot/using-github-copilot/coding-agent"
+    }
+  ]
+}
