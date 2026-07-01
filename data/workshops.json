@@ -2,7 +2,7 @@
   "meta": {
     "title": "Workshop カタログ",
     "subtitle": "GitHub / Copilot / Advanced Security / Agentic DevOps ハンズオン公開カタログ",
-    "updated": "2026-06-30"
+    "updated": "2026-07-01"
   },
   "levels": [
     { "id": "basic", "name": "Basic", "description": "はじめての方・基礎を学ぶ方向け" },
@@ -42,5 +42,16 @@
       "color": "#1a7f37"
     }
   ],
-  "workshops": []
+  "workshops": [
+    {
+      "id": "github-basic",
+      "title": "GitHub Basic ワークショップ",
+      "category": "gh",
+      "level": "basic",
+      "description": "Git / GitHub がはじめての方向け。Issue → Branch → Commit → Pull Request → Review → Merge の GitHub Flow を、Falling Blocks のバグ修正を通して一周体験します。コンフリクト解決・やり直し／復旧も扱います。",
+      "tags": ["Git", "GitHub Flow", "Pull Request", "はじめて", "ハンズオン"],
+      "duration": "約125〜140分",
+      "url": "https://tachaan.github.io/workshop-github-basic/"
+    }
+  ]
 }
