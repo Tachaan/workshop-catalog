@@ -23,7 +23,6 @@
     els.title = document.getElementById("site-title");
     els.subtitle = document.getElementById("site-subtitle");
     els.updated = document.getElementById("updated");
-    els.matrix = document.getElementById("matrix");
     els.categoryFilters = document.getElementById("category-filters");
     els.levelFilters = document.getElementById("level-filters");
     els.search = document.getElementById("search");
@@ -82,53 +81,9 @@
     if (meta.title) { els.title.textContent = meta.title; document.title = meta.title; }
     els.subtitle.textContent = meta.subtitle || "";
     els.updated.textContent = meta.updated || "—";
-    renderMatrix();
     renderCategoryFilters();
     renderLevelFilters();
     renderCards();
-  }
-
-  /* ---------- Matrix ---------- */
-  function renderMatrix() {
-    var cats = state.data.categories || [];
-    var levels = state.data.levels || [];
-
-    var thead = "<thead><tr><th class='cat-cell'>カテゴリ</th>";
-    levels.forEach(function (l) { thead += "<th>" + escapeHtml(l.name) + "</th>"; });
-    thead += "</tr></thead>";
-
-    var tbody = "<tbody>";
-    cats.forEach(function (c) {
-      tbody += "<tr><td class='cat-cell'><span class='cat-name'>" +
-        "<span class='dot' style='background:" + escapeHtml(c.color || "#888") + "'></span>" +
-        escapeHtml(c.short) + " — " + escapeHtml(c.name) + "</span></td>";
-      levels.forEach(function (l) {
-        var has = (c.levels || []).indexOf(l.id) !== -1;
-        if (has) {
-          tbody += "<td><button class='matrix-cell available' " +
-            "data-category='" + escapeAttr(c.id) + "' data-level='" + escapeAttr(l.id) + "' " +
-            "title='" + escapeAttr(c.name + " / " + l.name + " で絞り込み") + "' " +
-            "aria-label='" + escapeAttr(c.name + " " + l.name) + "'>●</button></td>";
-        } else {
-          tbody += "<td><span class='matrix-cell unavailable' aria-label='対象なし'>—</span></td>";
-        }
-      });
-      tbody += "</tr>";
-    });
-    tbody += "</tbody>";
-
-    els.matrix.innerHTML = thead + tbody;
-
-    var cells = els.matrix.querySelectorAll(".matrix-cell.available");
-    Array.prototype.forEach.call(cells, function (cell) {
-      cell.addEventListener("click", function () {
-        state.activeCategory = cell.getAttribute("data-category");
-        state.activeLevel = cell.getAttribute("data-level");
-        syncFilterUI();
-        renderCards();
-        document.getElementById("filter-heading").scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
   }
 
   /* ---------- Filter chips ---------- */
@@ -180,6 +135,9 @@
     if (!list.length) {
       els.cards.innerHTML = "";
       els.emptyState.hidden = false;
+      els.emptyState.textContent = (state.data.workshops || []).length
+        ? "条件に一致するワークショップが見つかりませんでした。"
+        : "まだワークショップが登録されていません。data/workshops.json に追加してください。";
       return;
     }
     els.emptyState.hidden = true;

@@ -66,7 +66,7 @@ GitHub Pages で公開できる、ビルド不要のプレーンな静的サイ�
 ### カテゴリ・レベルの追加
 
 `data/workshops.json` の `categories` / `levels` を編集します。各カテゴリの
-`levels` 配列が、対応マトリクスとフィルタに反映されます。`color` はバッジ色です。
+`levels` 配列が、フィルタに反映されます。`color` はバッジ色です。
 
 ## ローカルでの確認
 
