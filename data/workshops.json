@@ -50,7 +50,7 @@
       "level": "basic",
       "description": "Git / GitHub がはじめての方向け。Issue → Branch → Commit → Pull Request → Review → Merge の GitHub Flow を、Falling Blocks のバグ修正を通して一周体験します。コンフリクト解決・やり直し／復旧も扱います。",
       "tags": ["Git", "GitHub Flow", "Pull Request", "はじめて", "ハンズオン"],
-      "duration": "約125〜140分",
+      "duration": "約105〜120分",
       "url": "https://tachaan.github.io/workshop-github-basic/"
     }
   ]
