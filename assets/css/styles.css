@@ -209,8 +209,10 @@ body {
   background: var(--bg-subtle);
 }
 .badge-level.advanced { color: #9a6700; border-color: #d4a72c; background: rgba(212, 167, 44, 0.12); }
+.badge-level.intermediate { color: #8250df; border-color: #a475f9; background: rgba(130, 80, 223, 0.1); }
 .badge-level.basic { color: #0969da; border-color: #54aeff; background: rgba(9, 105, 218, 0.1); }
 :root[data-theme="dark"] .badge-level.advanced { color: #e3b341; }
+:root[data-theme="dark"] .badge-level.intermediate { color: #bc8cff; }
 :root[data-theme="dark"] .badge-level.basic { color: #58a6ff; }
 
 .card-title { font-size: 1.08rem; margin: 0; line-height: 1.4; }
