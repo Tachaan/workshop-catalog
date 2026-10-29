@@ -5,12 +5,12 @@ GitHub Pages で公開できる、ビルド不要のプレーンな静的サイ�
 
 ## カテゴリ × レベル
 
-| カテゴリ | Basic | Advanced |
-|----------|:-----:|:--------:|
-| **GH** — GitHub | ✓ | |
-| **GHCP** — GitHub Copilot | ✓ | ✓ |
-| **GHAS** — GitHub Advanced Security | ✓ | |
-| **Agentic DevOps** | | ✓ |
+| カテゴリ | Basic | Intermediate | Advanced |
+|----------|:-----:|:------------:|:--------:|
+| **GH** — GitHub | ✓ | | |
+| **GHCP** — GitHub Copilot | ✓ | ✓ | ✓ |
+| **GHAS** — GitHub Advanced Security | ✓ | | |
+| **Agentic DevOps** | | | ✓ |
 
 ## 構成
 
@@ -57,7 +57,7 @@ GitHub Pages で公開できる、ビルド不要のプレーンな静的サイ�
 | `id` | ✓ | 一意な識別子（英数字・ハイフン） |
 | `title` | ✓ | ワークショップ名 |
 | `category` | ✓ | `gh` / `ghcp` / `ghas` / `agentic-devops` のいずれか |
-| `level` | ✓ | `basic` / `advanced` のいずれか |
+| `level` | ✓ | `basic` / `intermediate` / `advanced` のいずれか |
 | `description` | | 概要説明 |
 | `tags` | | タグの配列（検索対象） |
 | `duration` | | 所要時間の目安 |
@@ -80,5 +80,5 @@ python -m http.server 8000
 
 ## ライセンス
 
-社内・コミュニティでの利用を想定したサンプルです。掲載 URL は初期サンプルのため、
-実際のワークショップへのリンクに置き換えてください。
+社内・コミュニティでの利用を想定したカタログです。
+掲載リンクは各ワークショップの公開教材ページまたは教材リポジトリを参照します。

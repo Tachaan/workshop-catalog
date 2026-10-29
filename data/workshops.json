@@ -2,10 +2,11 @@
   "meta": {
     "title": "Workshop カタログ",
     "subtitle": "GitHub / Copilot / Advanced Security / Agentic DevOps ハンズオン公開カタログ",
-    "updated": "2026-07-01"
+    "updated": "2026-10-29"
   },
   "levels": [
     { "id": "basic", "name": "Basic", "description": "はじめての方・基礎を学ぶ方向け" },
+    { "id": "intermediate", "name": "Intermediate", "description": "基礎を踏まえて実務での活用を学ぶ方向け" },
     { "id": "advanced", "name": "Advanced", "description": "実務での活用・応用を学ぶ方向け" }
   ],
   "categories": [
@@ -22,7 +23,7 @@
       "short": "GHCP",
       "name": "GitHub Copilot",
       "description": "コード補完からチャット・エージェントまで GitHub Copilot を体験する。",
-      "levels": ["basic", "advanced"],
+      "levels": ["basic", "intermediate", "advanced"],
       "color": "#8250df"
     },
     {
@@ -52,6 +53,36 @@
       "tags": ["Git", "GitHub Flow", "Pull Request", "はじめて", "ハンズオン"],
       "duration": "約105〜120分",
       "url": "https://tachaan.github.io/workshop-github-basic/"
+    },
+    {
+      "id": "ghcp-entry",
+      "title": "GitHub Copilot はじめの一歩ワークショップ",
+      "category": "ghcp",
+      "level": "basic",
+      "description": "Copilotを業務で使い始める開発者向けの60分入門です。Support Ticket Dashboardで既存コードと回答を照合し、仕様整理、安全な小規模リファクタリング、動作確認まで、人が差分と実行結果を確かめる基本サイクルを体験します。",
+      "tags": ["Copilot Chat", "コード理解", "仕様整理", "リファクタリング"],
+      "duration": "約60分",
+      "url": "https://github.com/Tachaan/workshop-github-copilot-entry/blob/master/handson/README.md"
+    },
+    {
+      "id": "ghcp-basic",
+      "title": "GitHub Copilot 基礎ワークショップ",
+      "category": "ghcp",
+      "level": "basic",
+      "description": "Support Ticket Dashboardの既存コードを題材に、コード理解、仕様・ドキュメント整理、安全なリファクタリング、出力の検証と責任ある利用を半日で学びます。Chat、Inline Suggestions、Agent Mode、Copilot Editsやテストを扱い、GH-300の学習にもつなげます。実習にはNode.js 20.12.0以上が必要です。",
+      "tags": ["Copilot Chat", "Agent Mode", "プロンプト設計", "テスト", "Responsible AI"],
+      "duration": "約270分（半日）",
+      "url": "#"
+    },
+    {
+      "id": "ghcp-intermediate",
+      "title": "GitHub Copilot 中級編ワークショップ",
+      "category": "ghcp",
+      "level": "intermediate",
+      "description": "Custom Instructions、Custom Agents、Skillsを要件定義からシステムテストまでのV字モデル開発に適用します。工程別の設計・実装・レビュー・テストと証跡を扱い、GitHub Cloud Agentへの委譲やCopilot Code Reviewも実践します。",
+      "tags": ["Custom Instructions", "Custom Agents", "Skills", "V字モデル", "Code Review"],
+      "duration": "約180分（3時間）",
+      "url": "https://github.com/Tachaan/workshop-github-copilot-intermidiate"
     }
   ]
 }
